@@ -1,6 +1,7 @@
 package br.ufpr.entidade;
 
 public class Nota {
+	
 	private int idNota;
 	private int idCliente;
 	private int idProduto;

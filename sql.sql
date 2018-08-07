@@ -62,8 +62,29 @@ insert into Nota(idProduto, idCliente, notaProduto) values (5,3,4);
 insert into Nota(idProduto, idCliente, notaProduto) values (5,4,4);
 insert into Nota(idProduto, idCliente, notaProduto) values (5,5,4);
 
-select cl.nomeCliente, n.notaProduto, p.nomeProduto from cliente cl, nota n, produto p where n.idProduto = p.idProduto and cl.idCliente = n.idCliente and cl.idCliente = 1;
+select cl.nomeCliente, n.notaProduto, p.nomeProduto from cliente cl, nota n, produto p where n.idProduto = p.idProduto and cl.idCliente = n.idCliente and cl.idCliente = 2;
 
+
+
+/*CRUD NOTA*/
+select * from nota;
+insert into nota(idNota, idCliente, idProduto, notaProduto) values (1,2,3,4);
+UPDATE nota SET idNota = ?, idCliente = ? , idProduto = ? , notaProduto = ? WHERE idNota = ?;
+delete from nota where idNota = ?;
+select * from nota where id;
+
+/*CRUD CLIENTE*/
+select * from cliente;
+insert into cliente(nomeCliente) values ('mateus');
+update cliente set idCliente = ?, nomeCliente = ? where idCliente = ?;
+delete from cliente where idCliente=?;
+
+
+/*CRUD PRODUTO*/
+select * from produto;
+insert into produto(nomeProduto) values ('mateus');
+update produto set idProduto = ?, nomeProduto = ? where idProduto = ?;
+delete from produto where idProduto=?;
 
 /*        *                   *     *                *
   [Cliente] -- <possuem>---- [ Nota ] ---< tem > --- [ Produto ]
